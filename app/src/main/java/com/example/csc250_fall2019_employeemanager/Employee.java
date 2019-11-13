@@ -42,4 +42,28 @@ public class Employee
     public double getWeight() {
         return weight;
     }
+
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
+
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+
+    public void setHeight_feet(int height_feet) {
+        this.height_feet = height_feet;
+    }
+
+    public void setHeight_inches(int height_inches) {
+        this.height_inches = height_inches;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 }

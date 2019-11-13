@@ -40,6 +40,11 @@ public class EmployeeEntryActivity extends AppCompatActivity
         }
         else //this is an employee we are updating
         {
+
+
+
+
+
             //allow the create button to also update the current employee object
             //note that you only have getters for your private employee fields
             //currently.  You may need to change that :)
