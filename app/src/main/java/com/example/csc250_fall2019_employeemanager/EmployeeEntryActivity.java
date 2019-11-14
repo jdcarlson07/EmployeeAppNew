@@ -37,22 +37,20 @@ public class EmployeeEntryActivity extends AppCompatActivity
             int height_feet = Integer.parseInt(this.height_feetET.getText().toString());
             int height_inches = Integer.parseInt(this.height_inchesET.getText().toString());
             this.theEmployee = new Employee(fname, lname, height_feet, height_inches, age, weight);
+
         }
         else //this is an employee we are updating
         {
-
-
-
-
+            theEmployee.setFname(this.fnameET.getText().toString());
+            theEmployee.setLname(this.lnameET.getText().toString());
+            theEmployee.setHeight_feet(Integer.parseInt(this.height_feetET.getText().toString()));
+            theEmployee.setHeight_inches(Integer.parseInt(this.height_inchesET.getText().toString()));
+            theEmployee.setAge(Integer.parseInt(this.ageET.getText().toString()));
+            theEmployee.setWeight(Double.parseDouble(this.weightET.getText().toString()));
 
             //allow the create button to also update the current employee object
             //note that you only have getters for your private employee fields
             //currently.  You may need to change that :)
         }
-
-
-
-
-
     }
 }

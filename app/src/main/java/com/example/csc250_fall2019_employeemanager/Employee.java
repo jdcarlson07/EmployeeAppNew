@@ -66,4 +66,9 @@ public class Employee
     public void setWeight(double weight) {
         this.weight = weight;
     }
+    public String display()
+    {
+        String info = "Name: " + getFname() + " " + getLname() + "\n" + "Height: " + getHeight_feet() + "' " + getHeight_inches() + "'' " + "\n" + "Weight: " + getAge() + "Age: " + getAge();
+        return info;
+    }
 }
