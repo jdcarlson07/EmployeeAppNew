@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class EmployeeEntryActivity extends AppCompatActivity
 {
     private EditText fnameET, lnameET, height_feetET, height_inchesET, weightET, ageET;
-    private Employee theEmployee = null;
+    private static Employee theEmployee = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -41,16 +41,25 @@ public class EmployeeEntryActivity extends AppCompatActivity
         }
         else //this is an employee we are updating
         {
-            theEmployee.setFname(this.fnameET.getText().toString());
-            theEmployee.setLname(this.lnameET.getText().toString());
-            theEmployee.setHeight_feet(Integer.parseInt(this.height_feetET.getText().toString()));
-            theEmployee.setHeight_inches(Integer.parseInt(this.height_inchesET.getText().toString()));
-            theEmployee.setAge(Integer.parseInt(this.ageET.getText().toString()));
-            theEmployee.setWeight(Double.parseDouble(this.weightET.getText().toString()));
+            this.theEmployee.setFname(this.fnameET.getText().toString());
+            this.theEmployee.setLname(this.lnameET.getText().toString());
+            this.theEmployee.setHeight_feet(Integer.parseInt(this.height_feetET.getText().toString()));
+            this.theEmployee.setHeight_inches(Integer.parseInt(this.height_inchesET.getText().toString()));
+            this.theEmployee.setAge(Integer.parseInt(this.ageET.getText().toString()));
+            this.theEmployee.setWeight(Double.parseDouble(this.weightET.getText().toString()));
 
             //allow the create button to also update the current employee object
             //note that you only have getters for your private employee fields
             //currently.  You may need to change that :)
         }
+    }
+    public void onButtonClick(View view) {
+
+        // get the text to pass
+        String info = this.theEmployee.getString();
+        // start the SecondActivity
+        Intent intent = new Intent(this, EmployeeListActivity.class);
+        intent.putExtra(Intent.EXTRA_TEXT, info);
+        startActivity(intent);
     }
 }

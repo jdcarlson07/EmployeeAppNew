@@ -43,6 +43,12 @@ public class Employee
         return weight;
     }
 
+    public String getString()
+    {
+        String string = "Name: " + getFname() + " " + getLname() + "\n" + "Height: " + Integer.toString(getHeight_feet()) + " feet " + Integer.toString(getHeight_inches()) + " inches " + "\n" + "Weight: " + Double.toString(getWeight()) + "\n" + "Age: " + Integer.toString(getAge());
+        return string;
+    }
+
     public void setFname(String fname) {
         this.fname = fname;
     }
@@ -66,9 +72,5 @@ public class Employee
     public void setWeight(double weight) {
         this.weight = weight;
     }
-    public String display()
-    {
-        String info = "Name: " + getFname() + " " + getLname() + "\n" + "Height: " + getHeight_feet() + "' " + getHeight_inches() + "'' " + "\n" + "Weight: " + getAge() + "Age: " + getAge();
-        return info;
-    }
+
 }
